@@ -1,0 +1,29 @@
+body {
+    background: #ffffff url("../images/tabletop.jpg") no-repeat left top;
+    background-size: cover;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h1 {
+    font-family: 'Germania One', cursive;
+    text-align: center;
+    font-size: 3.5em;
+}
+
+#welcome  {
+    padding: 2rem;
+    background: #26112E;
+    color: #ffffff;
+}
+
+.header {
+    background: #1D2A49;
+    color: #ffffff;
+}
+
+.weapon {
+    border: 2px solid #1D2A49;
+    background-color: #304984;
+    font-size: 5rem;
+    padding: 10px;
+}
