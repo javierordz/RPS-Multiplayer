@@ -59,6 +59,13 @@
                     </div>
                 </div>
 
+                <div class="row hidden" id="hiddenRow3" >
+                    <div class="card" style="color:red;">
+                        This should not exist. But removing players' connections has proved problematic.
+                        <button type="button" class="btn btn-danger" id="hardReset">DISCONNECT ALL PLAYERS</button>
+                    </div>
+                </div>
+
             </div>
 
             <div class="col">
@@ -81,9 +88,11 @@
                         <div class="card">
                             <div class="card-header" id="userStateTitle"></div>
                             <div class="card-body statsCard">
-                                <p>Wins: <span id="wins"></span></p>
-                                <p>Losses: <span id="losses"></span></p>
-                                <p>Draws: <span id="draws"></span></p>
+                                <div class="row" style="margin-bottom: 0">
+                                    <div class="col"><span class="stat">Wins: <span id="wins"></span></span></div>
+                                    <div class="col"><span class="stat">Losses: <span id="losses"></span></span></div>
+                                    <div class="col"><span class="stat">Draws: <span id="draws"></span></span></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -91,10 +100,16 @@
 
                 <div class="row hidden" id="chat">
                     <div class="col">
-                        <div class="card bg-primary">
-                            <div class="card-header">CHAT</div>
-                            <div class="card-body statsCard" id="chatContent">
-                                <p>Some text</p>
+                        <div class="card">
+                            <div class="card-header">Chat</div>
+                            <div class="card-body statsCard">
+                                <div class="form-group" id="chatContent">
+                                    <textarea class="form-control" rows="7" id="comment" readonly></textarea>
+                                    <div class="input-group input-group-sm">
+                                        <input type="text" class="form-control" id="commentInput" placeholder="trash talk...">
+                                        <div class="input-group-append"><button type="button" class="btn" id="chatButton">Send</button></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

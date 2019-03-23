@@ -11,13 +11,20 @@ h1 {
     font-size: 3.5em;
 }
 
+.statsCard {
+    font-size: 1em;
+}
+
 .hidden {
     display: none;
 }
 
 .row {
     margin-bottom: 20px;
-    /* margin: 0 0 20px; */
+}
+
+.stat {
+    margin-bottom: .3rem;
 }
 
 #welcome  {
@@ -26,7 +33,7 @@ h1 {
     color: #ffffff;
 }
 
-#connectButton {
+#connectButton, #chatButton {
     background: #C44C39;
     color: #ffffff;
 }
@@ -69,5 +76,12 @@ h1 {
     color: #ffffff;
     font-size: 5rem;
     text-align: center;
-    padding: 10px;
+    padding: auto;
+}
+
+textarea {
+    resize: none;
+    height: 300px;
+    max-height: 300px;
+    margin-bottom: 10px;
 }

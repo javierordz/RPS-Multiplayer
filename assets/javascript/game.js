@@ -38,8 +38,7 @@ function battle() {
 
         playerArray.splice(playerArray.indexOf(userWeapon), 1);
         opponentWeapon = playerArray.toString();
-        console.log(opponentWeapon);
-        $("#oppWChoice").html("<i class='far fa-hand-" + opponentWeapon + "'></i>");
+        $("#oppWChoice").html("<i class='far fa-hand-" + opponentWeapon + " my-auto'></i>");
 
         if (userWeapon == opponentWeapon) {
             draws++;
@@ -84,7 +83,7 @@ dbPlayers.onSnapshot(function() {
             opponentWeapon = playerArray.toString();
 
             if (opponentWeapon != "") { 
-                $("#oppWChoice").html("<i class='far fa-hand-" + opponentWeapon + "'></i>"); 
+                $("#oppWChoice").html("<i class='far fa-hand-" + opponentWeapon + " my-auto'></i>"); 
             }
 
             opponentWeapon = [];
@@ -140,6 +139,7 @@ $("#connectButton").on("click", function(event) {
             } else {
                 userTitle = "Spectator";
                 $("#display").text("UNAVAILABLE");
+                $("#hiddenRow3").removeClass("hidden");
             }
         })
     }
@@ -148,8 +148,32 @@ $("#connectButton").on("click", function(event) {
 $(".weapon").on("click", function() {
     if (userWeapon === "" && userTitle != "Spectator") {
         userWeapon = $(this).data("value");
-        $("#userWChoice").html("<i class='far fa-hand-" + userWeapon + "'></i>");
+        $("#userWChoice").html("<i class='far fa-hand-" + userWeapon + " my-auto'></i>");
         $("#hiddenRow2").removeClass("hidden");
         writePlayer();
     };
 });
+
+$("#hardReset").on("click", function() {
+    $("#hiddenRow3").addClass("hidden");
+    wins = 0;
+    losses = 0;
+    draws = 0;
+
+    userTitle = "Spectator";
+    userName = "";
+    userWeapon = "";
+    opponentWeapon = "";
+
+    dbPlayers.get().then(function(snapshot) {
+        snapshot.forEach(function(snap) {
+            playerArray.push(snap.id);
+        });
+        for(var i = 0; i < playerArray.length; i++) {
+            dbPlayers.doc(playerArray[i]).delete();
+        }
+    });
+
+    playerArray= [];
+    
+})
