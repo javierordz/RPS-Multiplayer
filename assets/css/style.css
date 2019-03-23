@@ -2,6 +2,7 @@ body {
     background: #ffffff url("../images/tabletop.jpg") no-repeat left top;
     background-size: cover;
     font-family: 'Josefin Sans', sans-serif;
+    color: #ffffff;
 }
 
 h1 {
@@ -10,20 +11,63 @@ h1 {
     font-size: 3.5em;
 }
 
+.hidden {
+    display: none;
+}
+
+.row {
+    margin-bottom: 20px;
+    /* margin: 0 0 20px; */
+}
+
 #welcome  {
     padding: 2rem;
     background: #26112E;
     color: #ffffff;
 }
 
-.header {
+#connectButton {
+    background: #C44C39;
+    color: #ffffff;
+}
+
+.header, #userStateTitle {
     background: #1D2A49;
+    border: 1px solid #1D2A49;;
+    color: #ffffff;
+}
+
+#statsCard {
+    background: #3858A2;
+    border: 1px solid #263965;
     color: #ffffff;
 }
 
 .weapon {
-    border: 2px solid #1D2A49;
-    background-color: #304984;
+    width: 250px;
+    border: 3px solid #263965;
+    background-color: #3858A2;
+    color: #1D2A49;
     font-size: 5rem;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.result {
+    width: 100%;
+    border: 2px solid #26112E;
+    background: #3B1A49;
+    font-size: 2rem;
+    letter-spacing: 1.2rem;
+}
+
+.vs {
+    width: 250px;
+    border: 2px solid #963C2E;
+    background: #C44C39;
+    color: #ffffff;
+    font-size: 5rem;
+    text-align: center;
     padding: 10px;
 }
