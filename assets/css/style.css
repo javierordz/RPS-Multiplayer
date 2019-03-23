@@ -31,13 +31,13 @@ h1 {
     color: #ffffff;
 }
 
-.header, #userStateTitle {
+.header, .card-header {
     background: #1D2A49;
     border: 1px solid #1D2A49;;
     color: #ffffff;
 }
 
-#statsCard {
+.statsCard {
     background: #3858A2;
     border: 1px solid #263965;
     color: #ffffff;
@@ -59,7 +59,7 @@ h1 {
     border: 2px solid #26112E;
     background: #3B1A49;
     font-size: 2rem;
-    letter-spacing: 1.2rem;
+    letter-spacing: 1rem;
 }
 
 .vs {
